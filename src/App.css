@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+html,body,#root{
+    height: 100%;
+}
+:root{
+    --cgap : 15px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.calculator-wrapper{
+    width: 25%;
+    height: 95%;
+    min-width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Header{
+    background-color: #36474F;
+    color: White;
+    font-size: 25px;
+    padding: 15px 20px;
+    height: 5%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.display{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background: #36474F;
+    color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cur{
+    margin:10px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.res{
+    margin: 10px;
+    font-size: 24px;
+    margin-top: 0;
+}
+.keyWrapper{
+    height: 65%;
+    background-color: #18202A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keyContainer{
+    width: 85%;
+    height: 80%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    column-gap: var(--cgap);
+    margin-bottom: 50px;
+}
+.additional{
+    grid-column: span 3;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: var(--cgap);
+}
+.operators{
+    grid-row: span 4;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: repeat(4,1fr);
+    column-gap: var(--cgap);
+}
+.nums{
+    grid-column: span 3;
+    grid-row: span 3;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    column-gap: var(--cgap);
+}
+.basic{
+    grid-column: span 4;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: var(--cgap);
+}
+button{
+    border-radius: 80%;
+    border: none;
+    font-size: 22px;
+    height: 54px;
+    width: 54px;
+    color: white;
+    background-color: transparent;
+    font-family: 'Nunito', sans-serif;
+}
+button:hover{
+    background-color: #8b8b8b42;
+}
+.equal{
+    background-color: #FF6531;
+}
+.operator{
+    background-color: white;
+    color: inherit;
+    font-weight: 800;
+}
+.operator:hover{
+    background-color:rgb(216, 216, 216);
+}
+.equal:hover{
+    background-color: #ff4d12;
 }
