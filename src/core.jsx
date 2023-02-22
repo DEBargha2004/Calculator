@@ -113,10 +113,8 @@ function calculate(expression) {
                 c1 = c1.padStart(c1.length + 1, '+')
             }
             let should_continue = false
-            console.log(c1)
             for (let i = 1; i < c1.length; i++) {
                 if (nonreq_ops.includes(c1[i])) {
-                    console.log('included');
                     should_continue = true
                 }
             }
